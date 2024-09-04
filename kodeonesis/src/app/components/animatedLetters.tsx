@@ -20,13 +20,13 @@ const letterVariants = {
 };
 
 const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ scrollXProgress }) => {
-  const yZ = useTransform(scrollXProgress, [0, 1], [0, 200]);
+  const yZ = useTransform(scrollXProgress, [0, 1], [0, -200]);
   const rotateZ = useTransform(scrollXProgress, [0, 1], [0, 100]);
 
   const yC = useTransform(scrollXProgress, [0, 1], [0, -200]);
   const rotateC = useTransform(scrollXProgress, [0, 1], [0, -100]);
 
-  const xN = useTransform(scrollXProgress, [0, 1], [0, 200]);
+  const xN = useTransform(scrollXProgress, [0, 1], [0, -200]);
   const rotateN = useTransform(scrollXProgress, [0, 1], [0, -200]);
 
   return (

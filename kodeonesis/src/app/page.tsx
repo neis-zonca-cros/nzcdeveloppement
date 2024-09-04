@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import AnimatedLetters from "./components/animatedLetters";
-import { motion, useScroll, useSpring } from 'framer-motion';
-import './globals.css';
+import { motion, useScroll, useSpring } from "framer-motion";
+import "./globals.css";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -23,39 +23,32 @@ export default function Home() {
     <div>
       <div
         ref={scrollRef}
-        className="overflow-y-scroll h-screen w-screen scroll-smooth"
+        className="overflow-y-scroll h-screen w-screen scroll-smooth bg-black"
       >
-        <motion.div
-          className="flex flex-col"
-          style={{ height: '300vh' }}
-        >
-          <section
-            className="flex h-screen items-center justify-center"
-          >
+        <motion.div className="flex flex-col" style={{ height: "300vh" }}>
+          <section className="flex h-screen items-center justify-center">
             <AnimatedLetters scrollXProgress={scrollYProgress} />
           </section>
 
-          <section
-            className="flex h-screen items-center justify-center bg-red-400"
-          >
+          <section className="flex h-screen items-center justify-center">
             <h1 className="text-6xl text-white">Section 1</h1>
           </section>
 
           <section
-            className="flex h-screen items-center justify-center bg-green-400"
-            style={{ maxHeight: '300vh' }}
+            className="flex h-screen items-center justify-center"
+            style={{ maxHeight: "300vh" }}
           >
             <h1 className="text-6xl text-white">Section 2</h1>
           </section>
-
         </motion.div>
 
 
 
         <motion.div
-          className="absolute left-0 right-0 h-1 bg-red-500 bottom-24"
+          className="absolute left-0 right-0 h-5 bg-red-500 top-0 origin-left"
           style={{ scaleX }}
         />
+        
       </div>
     </div>
   );
