@@ -29,6 +29,7 @@ const config: Config = {
     },
     fontFamily: {
       'agrandir': ['agrandir', 'sans-serif'],
+      'body': ['body', 'sans-serif'],
     },
   },
   plugins: [],

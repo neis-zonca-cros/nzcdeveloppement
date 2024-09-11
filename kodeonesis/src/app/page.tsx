@@ -3,8 +3,11 @@
 import React, { useRef } from "react";
 import { motion, useSpring, useScroll } from "framer-motion";
 import "./globals.css";
-import Page1 from "./page1";
-import Page2 from "./page2";
+import APropos from "./APropos/page";
+import Competences from "./Competences/page";
+import NZC from "./NZC/page";
+// import { Navigation } from "./components/navigation";
+
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -18,17 +21,19 @@ export default function Home() {
 
   return (
     <div>
+      {/* <Navigation />  */}
       <div
         ref={scrollRef}
-        className="overflow-y-scroll overflow-x-hidden h-screen w-screen scroll-smooth bg-background"
+        className="no-scrollbar overflow-y-scroll overflow-x-hidden h-screen w-screen scroll-smooth bg-background"
       >
-        <motion.div className="flex flex-col">
-          <Page1 scrollRef={scrollRef} />
-          <Page2 />
+        <motion.div className="no-scrollbar flex flex-col">
+          <NZC scrollRef={scrollRef} />
+          <APropos />
+          <Competences />
         </motion.div>
 
         <motion.div
-          className="absolute left-0 right-0 h-5 bg-load top-0 origin-left"
+          className="no-scrollbar absolute left-0 right-0 h-5 bg-load bottom-0 origin-left"
           style={{ scaleX }}
         />
       </div>

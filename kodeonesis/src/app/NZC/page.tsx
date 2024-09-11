@@ -46,7 +46,7 @@ interface PageProps {
     scrollRef: React.RefObject<HTMLDivElement>;
 }
 
-const Page1: React.FC<PageProps> = ({ scrollRef }) => {
+const NZC: React.FC<PageProps> = ({ scrollRef }) => {
     const { scrollYProgress } = useScroll({ container: scrollRef });
 
     const yZ = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -62,14 +62,14 @@ const Page1: React.FC<PageProps> = ({ scrollRef }) => {
 
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen w-screen">
+        <div id="nzc" className="no-scrollbar flex flex-col justify-center items-center h-screen w-screen">
             <div className="flex space-x-4">
                 <div className="flex flex-col justify-center items-center">
                     <motion.div
-                        variants={letterVariants.D}
+                        variants={letterVariants.C}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yD }}
+                        style={{ y: yC }}
                         className="text-xl md:text-2xl lg:text-2xl font-bold text-title font-agrandir"
                     >
                         Néïs
@@ -138,4 +138,4 @@ const Page1: React.FC<PageProps> = ({ scrollRef }) => {
     );
 };
 
-export default Page1;
+export default NZC;

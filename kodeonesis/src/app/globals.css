@@ -7,3 +7,20 @@
   src: url("/cocon.otf")
 }
 
+@font-face {
+  font-family: "body";
+  src: url("/body.otf")
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
