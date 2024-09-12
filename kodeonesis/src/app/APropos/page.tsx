@@ -31,7 +31,7 @@ const APropos = () => {
     <section
       ref={refSection2}
       id="apropos"
-      className="no-scrollbar overflow-x-hidden flex flex-col h-screen w-screen items-center justify-start p-10"
+      className="no-scrollbar overflow-x-hidden flex flex-col h-screen w-screen h-screen items-center justify-start p-2 md:p-10 lg:p-10"
     >
       <motion.img
         src="/neis.jpg"
@@ -39,7 +39,7 @@ const APropos = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={inViewSection2 ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
         transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.2 }}
-        className="w-48 rounded-full mb-5"
+        className="w-40 md:w-48 lg:w-48 pt-2 rounded-full mb-5"
       />
       <div className="w-[80%]">
         <motion.div
