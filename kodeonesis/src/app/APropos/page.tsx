@@ -31,7 +31,7 @@ const APropos = () => {
     <section
       ref={refSection2}
       id="apropos"
-      className="no-scrollbar overflow-x-hidden flex flex-col h-screen w-screen h-screen items-center justify-start p-2 md:p-10 lg:p-10"
+      className="no-scrollbar overflow-x-hidden flex flex-col w-screen h-screen items-center justify-start p-2 md:p-10 lg:p-10"
     >
       <motion.img
         src="/neis.jpg"
