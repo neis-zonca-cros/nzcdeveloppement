@@ -6,7 +6,7 @@ import "./globals.css";
 import APropos from "./APropos/page";
 import Competences from "./Competences/page";
 import NZC from "./NZC/page";
-// import { Navigation } from "./components/navigation";
+import { Navigation } from "./components/Navigation";
 
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Navigation />  */}
+      <Navigation /> 
       <div
         ref={scrollRef}
         className="no-scrollbar overflow-y-scroll overflow-x-hidden h-screen w-screen scroll-smooth bg-background"
