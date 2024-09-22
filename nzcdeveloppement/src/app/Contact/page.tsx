@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons/faPencil";
+import { FaLinkedin, FaLinkedinIn } from "react-icons/fa6";
 
 const Contact: React.FC = () => {
+    const currentYear = new Date().getFullYear();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -118,6 +120,17 @@ const Contact: React.FC = () => {
           Envoyer
         </button>
       </form>
+      <footer className="text-title text-center p-10">
+      <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base">
+        <p className="pb-5">&copy; {currentYear} NZC Développement. Tous droits réservés.</p>
+  
+        <a href="https://www.linkedin.com/in/néïs-zonca-cros" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm md:text-base lg:text-base justify-center text-title hover:underline">
+            <FaLinkedin className="mr-2" />
+            LinkedIn
+          </a>
+
+      </div>
+    </footer>
     </div>
   );
 };
