@@ -7,6 +7,8 @@ import APropos from "./APropos/page";
 import Competences from "./Competences/page";
 import NZC from "./NZC/page";
 import { Navigation } from "./components/Navigation";
+import Contact from "./Contact/page";
+import Prestations from "./Prestations/page";
 
 
 export default function Home() {
@@ -30,6 +32,8 @@ export default function Home() {
           <NZC scrollRef={scrollRef} />
           <APropos />
           <Competences />
+          <Prestations />
+          <Contact/>
         </motion.div>
 
         <motion.div

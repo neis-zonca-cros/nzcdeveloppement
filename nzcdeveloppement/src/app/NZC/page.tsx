@@ -130,9 +130,9 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                 initial="hidden"
                 animate="visible"
                 style={{ y: yD }}
-                className="text-2xl md:text-4xl lg:text-4xl mt-5 font-bold text-title font-agrandir"
+                className="text-xl md:text-2xl lg:text-2xl mt-5 font-bold text-title font-agrandir"
             >
-                Développement web
+                Développement web & mobile
             </motion.div>
         </div>
     );
