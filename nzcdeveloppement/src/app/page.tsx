@@ -5,7 +5,7 @@ import { motion, useSpring, useScroll } from "framer-motion";
 import "./globals.css";
 import APropos from "./APropos/page";
 import Competences from "./Competences/page";
-import NZC from "./NZC/page";
+import NZC from "./components/NZC";
 import { Navigation } from "./components/Navigation";
 import Contact from "./Contact/page";
 import Prestations from "./Prestations/page";
