@@ -13,7 +13,6 @@ const Contact: React.FC = () => {
     triggerOnce: false,
     threshold: 0.4,
   });
-  const currentYear = new Date().getFullYear();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -160,23 +159,6 @@ const Contact: React.FC = () => {
           </div>
         </form>
       </motion.div>
-      <footer className="text-title text-center p-10">
-        <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base">
-          <p className="pb-5">
-            &copy; {currentYear} NZC Développement. Tous droits réservés.
-          </p>
-          <p className="pb-5">N°SIRET: 93271239100014</p>
-          <a
-            href="https://www.linkedin.com/in/néïs-zonca-cros"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-sm md:text-base lg:text-base justify-center text-title hover:underline"
-          >
-            <FaLinkedin className="mr-2" />
-            LinkedIn
-          </a>
-        </div>
-      </footer>
     </div>
   );
 };
