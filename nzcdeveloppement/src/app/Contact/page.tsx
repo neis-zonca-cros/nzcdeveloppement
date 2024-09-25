@@ -6,6 +6,7 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons/faPencil";
 import { FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Swal from "sweetalert2";
 
 const Contact: React.FC = () => {
   const [refSection3, inViewSection3] = useInView({
@@ -57,7 +58,14 @@ const Contact: React.FC = () => {
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
-          alert("Message envoyé!");
+          Swal.fire({
+            title: 'Merci !',
+            text: 'Une réponse est en cours... !',
+            confirmButtonText: 'Fermer',
+            customClass: {
+              popup: 'custom-swal', 
+            },
+          });
           setFormData({ name: "", email: "", message: "" });
         },
         (err) => {

@@ -24,3 +24,32 @@ body {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
+
+.custom-swal {
+  background-color: #172329; 
+  color: #bcbcbc; 
+  padding: 1em; 
+  border-radius: 10px;
+}
+
+.custom-swal .swal2-title {
+  color: #bcbcbc; 
+  font-family: "agrandir", sans-serif;
+}
+
+.custom-swal .swal2-confirm {
+  background-color: #172329; 
+  border-radius: 10px;
+  padding: 0.5em 1em; 
+  color: white;
+  border: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, box-shadow 0.3s; 
+  font-family: "body", sans-serif;
+}
+
+.custom-swal .swal2-confirm:hover {
+  background-color: #455356; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  font-family: "body", sans-serif;
+}
