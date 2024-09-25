@@ -11,31 +11,16 @@ import {
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { CgFigma } from "react-icons/cg";
+import {
+  buttonVariants,
+  containerVariants,
+} from "../components/AnimatedVariants";
 
 const Competences = () => {
   const [activeModal, setActiveModal] = useState<number | null>(null);
 
   const openModal = (modalIndex: number) => setActiveModal(modalIndex);
   const closeModal = () => setActiveModal(null);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
 
   const [refSection3, inViewSection3] = useInView({
     triggerOnce: false,
@@ -210,13 +195,13 @@ const Competences = () => {
             Déploiement du projet
           </h2>
           <p className="text-sm md:text-base lg:text-base font-body text-title">
-            Une fois votre application terminée, je m’occupe de la mettre en ligne et de
-            le rendre accessible à vos visiteurs. Cela inclut la configuration
-            des serveurs, la gestion des noms de domaine, et le transfert du
-            site depuis mon environnement de développement vers le web. Je
-            m&apos;assure également que tout fonctionne correctement après le
-            lancement, pour que votre site soit prêt à accueillir vos visiteurs
-            sans souci.{" "}
+            Une fois votre application terminée, je m’occupe de la mettre en
+            ligne et de le rendre accessible à vos visiteurs. Cela inclut la
+            configuration des serveurs, la gestion des noms de domaine, et le
+            transfert du site depuis mon environnement de développement vers le
+            web. Je m&apos;assure également que tout fonctionne correctement
+            après le lancement, pour que votre site soit prêt à accueillir vos
+            visiteurs sans souci.{" "}
           </p>
           <p className="text-sm md:text-base lg:text-base font-body text-title pt-5 text-center">
             Possibilité de déploiement sur plusieurs plateformes et serveurs

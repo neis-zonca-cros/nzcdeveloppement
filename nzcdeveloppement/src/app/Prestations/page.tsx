@@ -3,15 +3,8 @@ import React, { useState } from "react";
 import Modal from "../components/Modal";
 import AnimatedButton from "../components/AnimatedButton";
 import {
-  faRulerCombined,
-  faPencil,
-  faDatabase,
-  faRocket,
   faHeart,
   faPerson,
-  faPeopleGroup,
-  faPeopleLine,
-  faPeopleArrows,
   faPeopleRobbery,
   faPersonCane,
   faLightbulb,
@@ -19,13 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { CgFigma } from "react-icons/cg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaPeopleRoof } from "react-icons/fa6";
 import { faWheelchair } from "@fortawesome/free-solid-svg-icons/faWheelchair";
 
 const Prestations = () => {
   const [activeModal, setActiveModal] = useState<number | null>(null);
+  const [refSection3, inViewSection3] = useInView({
+    triggerOnce: false,
+    threshold: 0.4,
+  });
 
   const openModal = (modalIndex: number) => setActiveModal(modalIndex);
   const closeModal = () => setActiveModal(null);
@@ -48,11 +43,6 @@ const Prestations = () => {
       transition: { duration: 0.5 },
     },
   };
-
-  const [refSection3, inViewSection3] = useInView({
-    triggerOnce: false,
-    threshold: 0.4,
-  });
 
   return (
     <div

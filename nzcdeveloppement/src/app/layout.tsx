@@ -5,8 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NZC Développement",
-};
+  title: "NZC Développement", }
 
 export default function RootLayout({
   children,
@@ -15,6 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <meta name="theme-color" content="#172329" />
+        <link rel="icon" href="/rocket.svg"/> 
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

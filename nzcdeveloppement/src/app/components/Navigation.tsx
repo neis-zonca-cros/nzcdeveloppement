@@ -1,40 +1,23 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
+import { menuVariants } from "./AnimatedVariants";
+import { MenuItem } from "./MenuItems";
 
 export function Navigation() {
   const [isOpen, setOpen] = useState(false);
 
-  const menuVariants = {
-    hidden: {
-      clipPath: "inset(0% 0% 100% 0%)", 
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-    visible: {
-      clipPath: "inset(0% 0% 0% 0%)", 
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   const handleLinkClick = () => {
-    setOpen(false); 
+    setOpen(false);
   };
 
-  const linkVariants = {
-    hover: {
-      scale: 1.05, 
-      transition: { duration: 0.3 },
-    },
-  };
+  const menuItems = [
+    { href: "#nzc", label: "NZC Développement" },
+    { href: "#apropos", label: "À Propos" },
+    { href: "#competences", label: "Mon savoir faire" },
+    { href: "#prestations", label: "Mes Prestations" },
+    { href: "#contact", label: "Me contacter" },
+  ];
 
   return (
     <nav className="fixed top-0 right-0 z-50">
@@ -49,53 +32,15 @@ export function Navigation() {
         animate={isOpen ? "visible" : "hidden"}
       >
         <ul className="h-full flex flex-col justify-center items-center space-y-4 font-agrandir text-xl md:text-2xl lg:text-2xl text-title">
-          <li className="pt-5">
-            <motion.div
-              variants={linkVariants}
-              whileHover="hover"
+          {menuItems.map((item) => (
+            <MenuItem
+              key={item.href}
+              href={item.href}
+              label={item.label}
               onClick={handleLinkClick}
-            >
-              <a href="#nzc" className="flex w-80 shadow-2xl justify-center px-10 py-5 rounded-full text-center">NZC Développement</a>
-            </motion.div>
-          </li>
-          <li className="pt-5">
-            <motion.div
-              variants={linkVariants}
-              whileHover="hover"
-              onClick={handleLinkClick}
-            >
-              <a href="#apropos" className="flex w-80 shadow-2xl justify-center px-10 py-5 rounded-full text-center">
-                À Propos
-              </a>
-            </motion.div>
-          </li>
-          <li className="pt-5">
-            <motion.div
-              variants={linkVariants}
-              whileHover="hover"
-              onClick={handleLinkClick}
-            >
-              <a href="#competences" className="flex shadow-2xl w-80 px-10 py-5 rounded-full text-center justify-center">Mon savoir faire</a>
-            </motion.div>
-          </li>
-          <li className="pt-5">
-            <motion.div
-              variants={linkVariants}
-              whileHover="hover"
-              onClick={handleLinkClick}
-            >
-              <a href="#prestations" className="flex shadow-2xl w-80 px-10 py-5 rounded-full text-center justify-center">Mes Prestations</a>
-            </motion.div>
-          </li>
-          <li className="pt-5">
-            <motion.div
-              variants={linkVariants}
-              whileHover="hover"
-              onClick={handleLinkClick}
-            >
-              <a href="#contact" className="flex shadow-2xl w-80 px-10 py-5 rounded-full text-center justify-center">Me contacter</a>
-            </motion.div>
-          </li>
+              isOpen={isOpen}
+            />
+          ))}
         </ul>
       </motion.div>
     </nav>
