@@ -29,7 +29,7 @@ export default function Home() {
         className="no-scrollbar overflow-y-scroll overflow-x-hidden h-screen w-screen scroll-smooth bg-background"
       >
         <motion.div className="no-scrollbar flex flex-col">
-          <NZC scrollRef={scrollRef} />
+          <NZC />
           <APropos />
           <Competences />
           <Prestations />

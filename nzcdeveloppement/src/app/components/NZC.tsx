@@ -46,19 +46,8 @@ interface PageProps {
     scrollRef: React.RefObject<HTMLDivElement>;
 }
 
-const NZC: React.FC<PageProps> = ({ scrollRef }) => {
-    const { scrollYProgress } = useScroll({ container: scrollRef });
+const NZC = () => {
 
-    const yZ = useTransform(scrollYProgress, [0, 1], [0, -200]);
-    const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 100]);
-
-    const yC = useTransform(scrollYProgress, [0, 1], [0, -200]);
-    const rotateC = useTransform(scrollYProgress, [0, 1], [0, -100]);
-
-    const xN = useTransform(scrollYProgress, [0, 1], [0, -200]);
-    const rotateN = useTransform(scrollYProgress, [0, 1], [0, -200]);
-
-    const yD = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
 
     return (
@@ -69,7 +58,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.C}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yC }}
                         className="text-xl md:text-2xl lg:text-2xl font-bold text-title font-agrandir"
                     >
                         Néïs
@@ -78,7 +66,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.N}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: xN, rotate: rotateN }}
                         className="text-9xl lg:text-extra-large lg:leading-custom-line font-bold text-title font-agrandir"
                     >
                         N
@@ -89,7 +76,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.N}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yC, rotate: rotateC }}
                         className="text-xl md:text-2xl lg:text-2xl font-bold text-title font-agrandir"
                     >
                         ZONCA
@@ -98,7 +84,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.Z}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yZ, rotate: rotateZ }}
                         className="text-9xl lg:text-extra-large lg:leading-custom-line text-title font-agrandir"
                     >
                         Z
@@ -109,7 +94,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.Z}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yZ, rotate: rotateZ }}
                         className="text-xl md:text-2xl lg:text-2xl font-bold text-title font-agrandir"
                     >
                         CROS
@@ -118,7 +102,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                         variants={letterVariants.C}
                         initial="hidden"
                         animate="visible"
-                        style={{ y: yC, rotate: rotateC }}
                         className="text-9xl lg:text-extra-large lg:leading-custom-line font-bold text-title font-agrandir"
                     >
                         C
@@ -129,7 +112,6 @@ const NZC: React.FC<PageProps> = ({ scrollRef }) => {
                 variants={letterVariants.D}
                 initial="hidden"
                 animate="visible"
-                style={{ y: yD }}
                 className="text-xl md:text-2xl lg:text-2xl mt-5 font-bold text-title font-agrandir"
             >
                 Développement web & mobile

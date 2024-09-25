@@ -32,14 +32,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
   return isOpen ? (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-90"
+      className="fixed inset-0 flex items-center justify-center bg-background bg-opacity-90"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <motion.div
         ref={modalRef}
-        className="w-2/3 md:w-1/3 lg:w-1/3 bg-background p-6 rounded-lg relative max-h-screen overflow-y-auto text-center"
+        className="w-3/3 m-5 md:w-2/3 lg:w-1/3 bg-background shadow-2xl p-6 rounded-lg relative max-h-screen overflow-y-auto text-center"
         initial={{ scale: 0.7, opacity: 0, zIndex: 0 }}
         animate={{ scale: 1, opacity: 1, zIndex: 10 }}
         exit={{ scale: 0.7, opacity: 0, zIndex: 0 }}
