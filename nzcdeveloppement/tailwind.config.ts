@@ -12,11 +12,6 @@ const config: Config = {
         background: "#172329",
         load: "#455356",
         title: "#bcbcbc",
-        autres: "#769897",
-        humain: "#d9a576",
-        font: "#f9f5ea",
-        border: "#37495f",
-        loader: "#a87b47",
       },
       fontSize: {
         'custom-size': '1.75rem',

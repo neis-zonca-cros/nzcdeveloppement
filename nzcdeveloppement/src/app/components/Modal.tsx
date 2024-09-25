@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface ModalProps {
   isOpen: boolean;
@@ -25,26 +27,26 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   return isOpen ? (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-90"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <motion.div
         ref={modalRef}
-        className="bg-white p-6 rounded-lg relative"
+        className="w-2/3 md:w-1/3 lg:w-1/3 bg-background p-6 rounded-lg relative max-h-screen overflow-y-auto text-center"
         initial={{ scale: 0.7, opacity: 0, zIndex: 0 }}
         animate={{ scale: 1, opacity: 1, zIndex: 10 }}
         exit={{ scale: 0.7, opacity: 0, zIndex: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
-        <button onClick={onClose} className="absolute top-2 right-2">
-          X
+        <button onClick={onClose} className="absolute top-5 right-5">
+          <FontAwesomeIcon icon={faXmark} color="#bcbcbc" size="xl"/>
         </button>
         {children}
       </motion.div>

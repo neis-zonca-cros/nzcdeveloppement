@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 interface AnimatedButtonProps {
   onClick: () => void;
   children?: React.ReactNode;
-  icon: any;
+  icon?: any;
   shape?: 'circle' | 'square' | 'rounded'; // Formes possibles pour le bouton
   borderRadius?: string; // Rayon des coins pour une forme personnalisée
 }
@@ -32,7 +32,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      <span className="text-lg px-10">{children}</span>
+      <span className="text-sm md:text-base lg:text-base px-10">{children}</span>
       <FontAwesomeIcon icon={icon} className="text-2xl md:text-4xl lg:text-4xl" />
     </motion.button>
   );
