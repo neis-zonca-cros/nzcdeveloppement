@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
             </motion.button>
           </div>
         </form>
-        <footer className="text-title text-center py-10 pb-20">
+        <footer className="text-title text-center p-10">
           <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base">
             <p className="pb-2">
               &copy; {currentYear} NZC Développement. Tous droits réservés.
