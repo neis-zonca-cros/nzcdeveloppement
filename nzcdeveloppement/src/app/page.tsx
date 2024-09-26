@@ -35,11 +35,12 @@ export default function Home() {
           <Contact />
           <Footer />
         </motion.div>
-        <motion.div
+
+      </div>
+      <motion.div
           className="no-scrollbar absolute left-0 right-0 h-5 bg-load top-0 origin-left"
           style={{ scaleX }}
         />
-      </div>
     </div>
   );
 }
