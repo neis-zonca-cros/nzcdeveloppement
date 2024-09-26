@@ -8,6 +8,7 @@ import NZC from "./components/NZC";
 import { Navigation } from "./components/Navigation";
 import Contact from "./Contact/page";
 import Prestations from "./Prestations/page";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -32,6 +33,7 @@ export default function Home() {
           <Competences />
           <Prestations />
           <Contact />
+          <Footer />
         </motion.div>
         <motion.div
           className="no-scrollbar absolute left-0 right-0 h-5 bg-load top-0 origin-left"
