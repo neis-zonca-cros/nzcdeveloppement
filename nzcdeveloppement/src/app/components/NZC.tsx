@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const letterVariants = {
     Z: {
@@ -42,14 +42,7 @@ const letterVariants = {
     },
 };
 
-interface PageProps {
-    scrollRef: React.RefObject<HTMLDivElement>;
-}
-
 const NZC = () => {
-
-
-
     return (
         <div id="nzc" className="no-scrollbar flex flex-col justify-center items-center h-screen w-screen">
             <div className="flex space-x-4">

@@ -6,8 +6,8 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="text-title text-center pb-10 pb-safe">
-            <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base">
+        <div className="text-title text-center pb-10 mb-10 pb-safe flex min-h-[50%]">
+            <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base justify-start">
                 <p className="pb-2">
                     &copy; {currentYear} NZC Développement. Tous droits réservés. N°SIRET: 93271239100014
                     <a
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                     </a>
                 </p>
             </div>
-        </footer>
+        </div>
     );
 };
 
