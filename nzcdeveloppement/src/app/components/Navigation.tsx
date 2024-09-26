@@ -7,8 +7,17 @@ import { MenuItem } from "./MenuItems";
 export function Navigation() {
   const [isOpen, setOpen] = useState(false);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href")!;
+    const targetSection = document.querySelector(targetId);
     setOpen(false);
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   const menuItems = [
@@ -37,7 +46,7 @@ export function Navigation() {
               key={item.href}
               href={item.href}
               label={item.label}
-              onClick={handleLinkClick}
+              onClick={handleLinkClick}  
               isOpen={isOpen}
             />
           ))}
