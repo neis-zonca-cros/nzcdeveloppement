@@ -47,7 +47,7 @@ const Prestations = () => {
   return (
     <div
       id="prestations"
-      className="no-scrollbar overflow-x-hidden flex flex-col h-screen w-screen items-center justify-center p-10"
+      className="no-scrollbar overflow-x-hidden flex flex-col min-h-screen w-screen items-center justify-center p-10"
       ref={refSection3}
     >
       <div className="flex flex-col items-center pb-10 mb-10 w-screen">

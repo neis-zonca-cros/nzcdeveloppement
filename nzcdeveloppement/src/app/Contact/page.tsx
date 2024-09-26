@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="no-scrollbar flex flex-col justify-center items-center h-screen w-screen"
+      className="no-scrollbar flex flex-col justify-center min-h-screen items-center w-screen"
       ref={refSection3}
     >
       <FontAwesomeIcon
@@ -162,9 +162,8 @@ const Contact: React.FC = () => {
         <footer className="text-title text-center p-10">
           <div className="mx-auto flex flex-col text-sm md:text-base lg:text-base">
             <p className="pb-2">
-              &copy; {currentYear} NZC Développement. Tous droits réservés.
+              &copy; {currentYear} NZC Développement. Tous droits réservés. N°SIRET: 93271239100014
             </p>
-            <p className="pb-2">N°SIRET: 93271239100014</p>
             <a
               href="https://www.linkedin.com/in/néïs-zonca-cros"
               target="_blank"
