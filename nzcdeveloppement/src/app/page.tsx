@@ -25,7 +25,7 @@ export default function Home() {
       <Navigation />
       <div
         ref={scrollRef}
-        className="no-scrollbar overflow-y-scroll overflow-x-hidden min-h-screen w-screen scroll-smooth bg-background"
+        className="no-scrollbar overflow-y-auto overflow-x-hidden h-screen w-screen scroll-smooth bg-background"
       >
         <motion.div className="no-scrollbar flex flex-col">
           <NZC />
