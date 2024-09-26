@@ -55,5 +55,5 @@ body {
 }
 
 .pb-safe {
-  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
 }
