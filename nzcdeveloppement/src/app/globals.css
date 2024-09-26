@@ -53,3 +53,7 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
   font-family: "body", sans-serif;
 }
+
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+}
